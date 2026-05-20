@@ -1,17 +1,12 @@
 import { GoogleGenerativeAI } from '@google/generative-ai'
 
-if (!process.env.GEMINI_API_KEY) {
-  throw new Error('GEMINI_API_KEY is not set in environment variables')
-}
-
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
-
 /**
- * Returns a Gemini model instance.
- * Default: gemini-2.0-flash — fast, cost-effective, supports JSON output.
+ * Returns a Gemini model instance (lazy — ne s'initialise pas au build).
  */
 export function getModel(modelName = 'gemini-2.5-flash') {
-  return genAI.getGenerativeModel({ model: modelName })
+  const key = process.env.GEMINI_API_KEY
+  if (!key) throw new Error('GEMINI_API_KEY is not set in environment variables')
+  return new GoogleGenerativeAI(key).getGenerativeModel({ model: modelName })
 }
 
 /**
