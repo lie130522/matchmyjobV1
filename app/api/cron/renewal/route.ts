@@ -6,6 +6,9 @@ import {
   subscriptionExpiredEmail,
 } from '@/lib/emails/templates'
 
+// Prevent Next.js from trying to statically analyze this route at build time
+export const dynamic = 'force-dynamic'
+
 // Called daily by Vercel Cron (see vercel.json)
 // Authorization via secret header to prevent unauthorized calls
 export async function GET(request: Request) {
