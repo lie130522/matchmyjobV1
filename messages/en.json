@@ -1,0 +1,205 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "cvOptimizer": "CV Optimizer",
+    "jobAnalyzer": "Job Analyzer",
+    "coverLetter": "Cover Letter",
+    "jobSearch": "Job Search",
+    "savedJobs": "Saved",
+    "history": "History",
+    "settings": "Settings",
+    "signOut": "Sign out"
+  },
+  "dashboard": {
+    "welcome": "Welcome back, {name}",
+    "subtitle": "What would you like to work on today?",
+    "attemptsRemaining": "Attempts remaining",
+    "plan": "Plan",
+    "upgrade": "Upgrade plan",
+    "features": {
+      "cvOptimizer": {
+        "title": "CV Optimizer",
+        "description": "Upload your CV and a job offer to get an ATS score, missing keywords, and an optimized version.",
+        "cta": "Optimize my CV"
+      },
+      "jobAnalyzer": {
+        "title": "Job Analyzer",
+        "description": "Paste any job URL or text to extract required skills, match score against your CV, and spot red flags.",
+        "cta": "Analyze a job"
+      },
+      "coverLetter": {
+        "title": "Cover Letter",
+        "description": "Generate a tailored cover letter automatically or get guided through a structured writing session.",
+        "cta": "Write a letter"
+      },
+      "jobSearch": {
+        "title": "Job Search",
+        "description": "Browse aggregated listings from Indeed, LinkedIn, Glassdoor filtered by role, location, and salary.",
+        "cta": "Search jobs"
+      }
+    }
+  },
+  "upgrade": {
+    "title": "You're out of attempts",
+    "subtitle": "Upgrade to keep optimizing your job search with AI.",
+    "noAutoRenewal": "No auto-renewal without confirmation. Cancel anytime from Settings.",
+    "choose": "Choose {plan}"
+  },
+  "attempts": {
+    "oneAttempt": "1 attempt"
+  },
+  "common": {
+    "back": "Back",
+    "cancel": "Cancel",
+    "save": "Save",
+    "close": "Close",
+    "loading": "Loading…",
+    "error": "An error occurred. Please try again.",
+    "networkError": "Network error. Please try again.",
+    "newAnalysis": "New analysis",
+    "download": "Download",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "regenerate": "Regenerate"
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome back",
+      "subtitle": "Sign in to your account",
+      "email": "Email address",
+      "password": "Password",
+      "forgotPassword": "Forgot password?",
+      "submit": "Sign in",
+      "loading": "Signing in…",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up",
+      "continueWith": "Continue with {provider}",
+      "orWith": "or with email"
+    },
+    "signup": {
+      "title": "Create your account",
+      "subtitle": "Start with 4 free AI attempts — no credit card required.",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email address",
+      "password": "Password",
+      "passwordHint": "Min. 8 characters",
+      "country": "Country",
+      "language": "Preferred language",
+      "gdpr": "I agree to the {privacy} and {terms}. I consent to the processing of my data for the purposes described.",
+      "submit": "Create account — it's free",
+      "loading": "Creating account…",
+      "hasAccount": "Already have an account?",
+      "logIn": "Log in",
+      "successTitle": "Check your email",
+      "successText": "We sent a confirmation link to {email}. Click the link to activate your account and get your 4 free attempts.",
+      "resend": "Try again"
+    }
+  },
+  "pricing": {
+    "title": "Simple, transparent pricing",
+    "subtitle": "1 attempt = 1 AI feature use. No auto-renewal — you confirm before each period. Unused attempts do not roll over.",
+    "mostPopular": "Most popular",
+    "currentPlan": "Current plan",
+    "perMonth": "/mo",
+    "footer": "No auto-renewal without your explicit confirmation · Cancel anytime from Settings · Secure payment via Stripe"
+  },
+  "settings": {
+    "title": "Settings",
+    "profile": "Profile",
+    "subscription": "Subscription",
+    "security": "Security",
+    "name": "Name",
+    "email": "Email",
+    "country": "Country",
+    "language": "Language",
+    "currentPlan": "Current plan",
+    "status": "Status",
+    "attemptsRemaining": "Attempts remaining",
+    "nextRenewal": "Next renewal",
+    "changePlan": "Change plan",
+    "upgradePlan": "Upgrade plan",
+    "cancelPlan": "Cancel plan",
+    "cancelConfirm": "Are you sure?",
+    "cancelYes": "Yes, cancel",
+    "keepPlan": "Keep plan",
+    "auth": "Authentication",
+    "accountCreated": "Account created"
+  },
+  "cvOptimizer": {
+    "title": "CV Optimizer",
+    "subtitle": "Upload your CV and paste a job offer to get an ATS score, missing keywords, and an optimized version.",
+    "uploadLabel": "Your CV",
+    "dropZone": "Drop your CV here or click to browse",
+    "dropHint": "PDF or DOCX · Max 10 MB",
+    "jobOfferLabel": "Job offer",
+    "jobOfferPlaceholder": "Paste the full job description here…",
+    "submit": "Optimize my CV — 1 attempt",
+    "loading": "Analyzing your CV…",
+    "scoreTitle": "ATS Score",
+    "before": "Before",
+    "after": "After",
+    "issues": "ATS Issues detected",
+    "missingKeywords": "Missing keywords",
+    "presentKeywords": "Keywords already present",
+    "viewOptimized": "View optimized CV text",
+    "downloadOptimized": "Download optimized CV",
+    "newAnalysis": "New analysis"
+  },
+  "jobAnalyzer": {
+    "title": "Job Analyzer",
+    "subtitle": "Paste a job URL or description to extract skills, level, red flags, and key requirements.",
+    "inputMethod": "Input method",
+    "jobUrl": "Job URL",
+    "pasteText": "Paste text",
+    "urlPlaceholder": "https://www.linkedin.com/jobs/view/…",
+    "urlHint": "If the URL is blocked, switch to \"Paste text\" and copy the job description manually.",
+    "textPlaceholder": "Paste the full job description here…",
+    "submit": "Analyze this job — 1 attempt",
+    "loading": "Analyzing job offer…",
+    "requiredSkills": "Required skills",
+    "niceToHave": "Nice to have",
+    "responsibilities": "Key responsibilities",
+    "redFlags": "Red flags",
+    "noCv": "Upload your CV in the CV Optimizer to get a personal match score for this job.",
+    "optimizeCta": "Optimize my CV for this job",
+    "newAnalysis": "New analysis"
+  },
+  "coverLetter": {
+    "title": "Cover Letter",
+    "subtitle": "Generate a tailored cover letter automatically or get guided through a structured writing session.",
+    "autoTitle": "Auto mode",
+    "autoDesc": "Claude reads your CV and the job offer and writes a complete, tailored cover letter for you.",
+    "autoCta": "Generate automatically",
+    "guidedTitle": "Guided mode",
+    "guidedDesc": "Answer 4 quick questions about your experience. Claude uses your words to craft a more personal letter.",
+    "guidedCta": "Answer questions first",
+    "jobOfferLabel": "Job offer",
+    "cvTextLabel": "Your CV text",
+    "cvTextHint": "Paste the text content of your CV so Claude can personalize the letter.",
+    "submit": "Generate cover letter — 1 attempt",
+    "loading": "Writing your cover letter…",
+    "wordCount": "{mode} cover letter · {count} words",
+    "writeAnother": "Write another",
+    "regenerate": "Regenerate"
+  },
+  "jobs": {
+    "title": "Job Search",
+    "subtitle": "Browse aggregated listings from Indeed, LinkedIn, Glassdoor and more. Saving is free — analyzing costs 1 attempt.",
+    "searchPlaceholder": "Job title, keywords…",
+    "locationPlaceholder": "City, country…",
+    "filters": "Filters",
+    "search": "Search",
+    "employmentType": "Employment type",
+    "remoteOnly": "Remote only",
+    "results": "{count} result",
+    "resultsPlural": "{count} results",
+    "noResults": "No jobs found. Try different keywords or location.",
+    "emptyState": "Enter a job title to start searching.",
+    "apply": "Apply",
+    "analyze": "Analyze",
+    "optimizeCv": "Optimize CV for this job",
+    "save": "Save",
+    "unsave": "Unsave"
+  }
+}

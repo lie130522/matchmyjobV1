@@ -1,0 +1,205 @@
+{
+  "nav": {
+    "dashboard": "Tableau de bord",
+    "cvOptimizer": "Optimiseur de CV",
+    "jobAnalyzer": "Analyseur d'offres",
+    "coverLetter": "Lettre de motivation",
+    "jobSearch": "Recherche d'emploi",
+    "savedJobs": "Sauvegardés",
+    "history": "Historique",
+    "settings": "Paramètres",
+    "signOut": "Se déconnecter"
+  },
+  "dashboard": {
+    "welcome": "Bon retour, {name}",
+    "subtitle": "Sur quoi souhaitez-vous travailler aujourd'hui ?",
+    "attemptsRemaining": "Tentatives restantes",
+    "plan": "Plan",
+    "upgrade": "Changer de plan",
+    "features": {
+      "cvOptimizer": {
+        "title": "Optimiseur de CV",
+        "description": "Téléchargez votre CV et une offre d'emploi pour obtenir un score ATS, les mots-clés manquants et une version optimisée.",
+        "cta": "Optimiser mon CV"
+      },
+      "jobAnalyzer": {
+        "title": "Analyseur d'offres",
+        "description": "Collez une URL ou du texte d'offre d'emploi pour extraire les compétences requises, le score de correspondance et les signaux d'alerte.",
+        "cta": "Analyser une offre"
+      },
+      "coverLetter": {
+        "title": "Lettre de motivation",
+        "description": "Générez automatiquement une lettre personnalisée ou laissez-vous guider dans une session d'écriture structurée.",
+        "cta": "Rédiger une lettre"
+      },
+      "jobSearch": {
+        "title": "Recherche d'emploi",
+        "description": "Parcourez les offres agrégées d'Indeed, LinkedIn, Glassdoor filtrées par poste, lieu et salaire.",
+        "cta": "Chercher des offres"
+      }
+    }
+  },
+  "upgrade": {
+    "title": "Vous n'avez plus de tentatives",
+    "subtitle": "Passez à un plan supérieur pour continuer à optimiser votre recherche d'emploi avec l'IA.",
+    "noAutoRenewal": "Pas de renouvellement automatique sans confirmation. Annulez à tout moment depuis les paramètres.",
+    "choose": "Choisir {plan}"
+  },
+  "attempts": {
+    "oneAttempt": "1 tentative"
+  },
+  "common": {
+    "back": "Retour",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "close": "Fermer",
+    "loading": "Chargement…",
+    "error": "Une erreur est survenue. Veuillez réessayer.",
+    "networkError": "Erreur réseau. Veuillez réessayer.",
+    "newAnalysis": "Nouvelle analyse",
+    "download": "Télécharger",
+    "copy": "Copier",
+    "copied": "Copié !",
+    "regenerate": "Régénérer"
+  },
+  "auth": {
+    "login": {
+      "title": "Bon retour",
+      "subtitle": "Connectez-vous à votre compte",
+      "email": "Adresse e-mail",
+      "password": "Mot de passe",
+      "forgotPassword": "Mot de passe oublié ?",
+      "submit": "Se connecter",
+      "loading": "Connexion…",
+      "noAccount": "Pas encore de compte ?",
+      "signUp": "S'inscrire",
+      "continueWith": "Continuer avec {provider}",
+      "orWith": "ou avec e-mail"
+    },
+    "signup": {
+      "title": "Créer votre compte",
+      "subtitle": "Commencez avec 4 tentatives IA gratuites — sans carte bancaire.",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Adresse e-mail",
+      "password": "Mot de passe",
+      "passwordHint": "8 caractères minimum",
+      "country": "Pays",
+      "language": "Langue préférée",
+      "gdpr": "J'accepte la {privacy} et les {terms}. Je consens au traitement de mes données aux fins décrites.",
+      "submit": "Créer mon compte — c'est gratuit",
+      "loading": "Création du compte…",
+      "hasAccount": "Vous avez déjà un compte ?",
+      "logIn": "Se connecter",
+      "successTitle": "Vérifiez votre e-mail",
+      "successText": "Nous avons envoyé un lien de confirmation à {email}. Cliquez dessus pour activer votre compte et obtenir vos 4 tentatives gratuites.",
+      "resend": "Réessayer"
+    }
+  },
+  "pricing": {
+    "title": "Une tarification simple et transparente",
+    "subtitle": "1 tentative = 1 utilisation d'une fonctionnalité IA. Pas de renouvellement auto — vous confirmez avant chaque période. Les tentatives non utilisées ne sont pas reportées.",
+    "mostPopular": "Le plus populaire",
+    "currentPlan": "Plan actuel",
+    "perMonth": "/mois",
+    "footer": "Pas de renouvellement automatique sans confirmation · Annulez à tout moment · Paiement sécurisé via Stripe"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "profile": "Profil",
+    "subscription": "Abonnement",
+    "security": "Sécurité",
+    "name": "Nom",
+    "email": "E-mail",
+    "country": "Pays",
+    "language": "Langue",
+    "currentPlan": "Plan actuel",
+    "status": "Statut",
+    "attemptsRemaining": "Tentatives restantes",
+    "nextRenewal": "Prochain renouvellement",
+    "changePlan": "Changer de plan",
+    "upgradePlan": "Mettre à niveau",
+    "cancelPlan": "Annuler le plan",
+    "cancelConfirm": "Êtes-vous sûr ?",
+    "cancelYes": "Oui, annuler",
+    "keepPlan": "Garder le plan",
+    "auth": "Authentification",
+    "accountCreated": "Compte créé le"
+  },
+  "cvOptimizer": {
+    "title": "Optimiseur de CV",
+    "subtitle": "Téléchargez votre CV et collez une offre d'emploi pour obtenir un score ATS, les mots-clés manquants et une version optimisée.",
+    "uploadLabel": "Votre CV",
+    "dropZone": "Déposez votre CV ici ou cliquez pour parcourir",
+    "dropHint": "PDF ou DOCX · Max 10 Mo",
+    "jobOfferLabel": "Offre d'emploi",
+    "jobOfferPlaceholder": "Collez la description complète du poste ici…",
+    "submit": "Optimiser mon CV — 1 tentative",
+    "loading": "Analyse de votre CV…",
+    "scoreTitle": "Score ATS",
+    "before": "Avant",
+    "after": "Après",
+    "issues": "Problèmes ATS détectés",
+    "missingKeywords": "Mots-clés manquants",
+    "presentKeywords": "Mots-clés déjà présents",
+    "viewOptimized": "Voir le CV optimisé",
+    "downloadOptimized": "Télécharger le CV optimisé",
+    "newAnalysis": "Nouvelle analyse"
+  },
+  "jobAnalyzer": {
+    "title": "Analyseur d'offres",
+    "subtitle": "Collez une URL ou une description de poste pour extraire les compétences, le niveau, les signaux d'alerte et les exigences clés.",
+    "inputMethod": "Méthode de saisie",
+    "jobUrl": "URL de l'offre",
+    "pasteText": "Coller le texte",
+    "urlPlaceholder": "https://www.linkedin.com/jobs/view/…",
+    "urlHint": "Si l'URL est bloquée, passez en mode « Coller le texte » et copiez la description manuellement.",
+    "textPlaceholder": "Collez la description complète du poste ici…",
+    "submit": "Analyser cette offre — 1 tentative",
+    "loading": "Analyse de l'offre…",
+    "requiredSkills": "Compétences requises",
+    "niceToHave": "Souhaitées",
+    "responsibilities": "Responsabilités clés",
+    "redFlags": "Signaux d'alerte",
+    "noCv": "Téléchargez votre CV dans l'Optimiseur de CV pour obtenir votre score de correspondance personnalisé.",
+    "optimizeCta": "Optimiser mon CV pour cette offre",
+    "newAnalysis": "Nouvelle analyse"
+  },
+  "coverLetter": {
+    "title": "Lettre de motivation",
+    "subtitle": "Générez automatiquement une lettre personnalisée ou laissez-vous guider dans une session d'écriture structurée.",
+    "autoTitle": "Mode automatique",
+    "autoDesc": "Claude lit votre CV et l'offre d'emploi, puis rédige une lettre de motivation complète et personnalisée.",
+    "autoCta": "Générer automatiquement",
+    "guidedTitle": "Mode guidé",
+    "guidedDesc": "Répondez à 4 questions rapides sur votre expérience. Claude utilise vos réponses pour rédiger une lettre plus personnelle.",
+    "guidedCta": "Répondre aux questions",
+    "jobOfferLabel": "Offre d'emploi",
+    "cvTextLabel": "Texte de votre CV",
+    "cvTextHint": "Collez le contenu textuel de votre CV pour que Claude puisse personnaliser la lettre.",
+    "submit": "Générer la lettre — 1 tentative",
+    "loading": "Rédaction de votre lettre…",
+    "wordCount": "Lettre {mode} · {count} mots",
+    "writeAnother": "Rédiger une autre",
+    "regenerate": "Régénérer"
+  },
+  "jobs": {
+    "title": "Recherche d'emploi",
+    "subtitle": "Parcourez les offres agrégées d'Indeed, LinkedIn, Glassdoor et plus. La sauvegarde est gratuite — l'analyse coûte 1 tentative.",
+    "searchPlaceholder": "Titre du poste, mots-clés…",
+    "locationPlaceholder": "Ville, pays…",
+    "filters": "Filtres",
+    "search": "Rechercher",
+    "employmentType": "Type de contrat",
+    "remoteOnly": "Télétravail uniquement",
+    "results": "{count} résultat",
+    "resultsPlural": "{count} résultats",
+    "noResults": "Aucune offre trouvée. Essayez d'autres mots-clés ou un autre lieu.",
+    "emptyState": "Saisissez un titre de poste pour commencer.",
+    "apply": "Postuler",
+    "analyze": "Analyser",
+    "optimizeCv": "Optimiser mon CV pour cette offre",
+    "save": "Sauvegarder",
+    "unsave": "Retirer"
+  }
+}
