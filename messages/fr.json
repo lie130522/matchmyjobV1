@@ -8,7 +8,8 @@
     "savedJobs": "Sauvegardés",
     "history": "Historique",
     "settings": "Paramètres",
-    "signOut": "Se déconnecter"
+    "signOut": "Se déconnecter",
+    "notifications": "Notifications"
   },
   "dashboard": {
     "welcome": "Bon retour, {name}",
@@ -16,6 +17,21 @@
     "attemptsRemaining": "Tentatives restantes",
     "plan": "Plan",
     "upgrade": "Changer de plan",
+    "suggestedJobs": "Offres pour vous",
+    "suggestedJobsSubtitle": "Basées sur votre CV profil",
+    "viewAllJobs": "Voir tout",
+    "noSuggestionsYet": "Téléchargez votre CV profil pour obtenir des suggestions d'offres personnalisées.",
+    "uploadCvCta": "Télécharger mon CV",
+    "savedJobsTitle": "Offres sauvegardées",
+    "contextual": {
+      "noProfileCv": "Votre CV profil n'est pas encore téléchargé",
+      "noProfileCvDesc": "Téléchargez votre CV une fois — MatchMyJob l'utilisera automatiquement dans toutes les fonctionnalités.",
+      "uploadNow": "Télécharger maintenant",
+      "attemptsLow": "Il vous reste peu de tentatives",
+      "attemptsLowDesc": "Il vous reste {n} tentative. Passez à un plan supérieur pour continuer.",
+      "attemptsLowDescPlural": "Il vous reste {n} tentatives. Passez à un plan supérieur pour continuer.",
+      "upgradeNow": "Mettre à niveau"
+    },
     "features": {
       "cvOptimizer": {
         "title": "Optimiseur de CV",
@@ -102,7 +118,19 @@
     "mostPopular": "Le plus populaire",
     "currentPlan": "Plan actuel",
     "perMonth": "/mois",
-    "footer": "Pas de renouvellement automatique sans confirmation · Annulez à tout moment · Paiement sécurisé via Stripe"
+    "footer": "Pas de renouvellement automatique sans confirmation · Annulez à tout moment · Paiement sécurisé via Stripe",
+    "attemptsLifetime": "tentatives · à vie",
+    "attemptsMonth": "tentatives / mois",
+    "getPlan": "Choisir {plan}",
+    "features": {
+      "cvUploadsMax": "5 CV max",
+      "unlimitedCv": "Stockage CV illimité",
+      "allFeatures": "4 fonctionnalités IA",
+      "basicSupport": "Support de base",
+      "emailSupport": "Support par e-mail",
+      "prioritySupport": "Support prioritaire",
+      "apiAccess": "Accès API"
+    }
   },
   "settings": {
     "title": "Paramètres",
@@ -124,7 +152,13 @@
     "cancelYes": "Oui, annuler",
     "keepPlan": "Garder le plan",
     "auth": "Authentification",
-    "accountCreated": "Compte créé le"
+    "accountCreated": "Compte créé le",
+    "profileCv": "CV profil",
+    "profileCvDesc": "Ce CV est utilisé automatiquement dans l'Optimiseur de CV et la Lettre de motivation.",
+    "uploadCv": "Télécharger un CV",
+    "replaceCv": "Remplacer le CV",
+    "cvUploaded": "CV téléchargé",
+    "uploading": "Téléchargement…"
   },
   "cvOptimizer": {
     "title": "Optimiseur de CV",
@@ -175,13 +209,21 @@
     "guidedDesc": "Répondez à 4 questions rapides sur votre expérience. Claude utilise vos réponses pour rédiger une lettre plus personnelle.",
     "guidedCta": "Répondre aux questions",
     "jobOfferLabel": "Offre d'emploi",
+    "jobOfferPlaceholder": "Collez la description complète du poste ici…",
     "cvTextLabel": "Texte de votre CV",
     "cvTextHint": "Collez le contenu textuel de votre CV pour que Claude puisse personnaliser la lettre.",
+    "profileCvLoaded": "CV profil chargé",
+    "clearCv": "Effacer",
     "submit": "Générer la lettre — 1 tentative",
+    "submitGuided": "Générer à partir de mes réponses — 1 tentative",
     "loading": "Rédaction de votre lettre…",
     "wordCount": "Lettre {mode} · {count} mots",
+    "modeAuto": "automatique",
+    "modeGuided": "guidée",
     "writeAnother": "Rédiger une autre",
-    "regenerate": "Régénérer"
+    "regenerate": "Régénérer",
+    "backToMode": "Retour",
+    "questionOf": "Question {n} sur {total}"
   },
   "jobs": {
     "title": "Recherche d'emploi",
@@ -200,6 +242,53 @@
     "analyze": "Analyser",
     "optimizeCv": "Optimiser mon CV pour cette offre",
     "save": "Sauvegarder",
-    "unsave": "Retirer"
+    "unsave": "Retirer",
+    "popularSearches": "Recherches populaires",
+    "searching": "Recherche d'offres en cours…",
+    "allowLocation": "Voir les offres près de chez vous",
+    "allowLocationHint": "Autorisez la géolocalisation pour filtrer automatiquement par ville.",
+    "allow": "Autoriser",
+    "detectingLocation": "Détection de votre position…",
+    "locationDetected": "Position détectée :",
+    "locationFiltered": "les résultats seront filtrés à votre région.",
+    "nearYou": "Résultats filtrés près de",
+    "remoteLabel": "Télétravail",
+    "allTypes": "Tous types",
+    "fullTime": "Temps plein",
+    "partTime": "Temps partiel",
+    "contract": "Contrat",
+    "internship": "Stage",
+    "suggestedForYou": "Sélectionnées pour vous",
+    "basedOnCv": "Basées sur votre CV profil",
+    "uploadCvForSuggestions": "Téléchargez votre CV profil pour obtenir des suggestions personnalisées",
+    "uploadCvCta": "Télécharger mon CV",
+    "loadingSuggestions": "Recherche d'offres correspondant à votre CV…",
+    "yourSearch": "Votre recherche"
+  },
+  "savedJobs": {
+    "title": "Offres sauvegardées",
+    "subtitle": "Offres mises de côté. La sauvegarde est gratuite — l'analyse ou l'optimisation coûte 1 tentative.",
+    "empty": "Aucune offre sauvegardée. Parcourez les offres et sauvegardez celles qui vous intéressent.",
+    "browseCta": "Parcourir les offres",
+    "back": "Retour au tableau de bord",
+    "savedOn": "Sauvegardé le",
+    "analyze": "Analyser",
+    "optimizeCv": "Optimiser mon CV",
+    "apply": "Postuler",
+    "remove": "Retirer"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "empty": "Tout est à jour !",
+    "emptyDesc": "Aucune nouvelle notification.",
+    "uploadCv": "Téléchargez votre CV profil",
+    "uploadCvDesc": "Obtenez des suggestions d'offres personnalisées et un chargement automatique dans toutes les fonctionnalités.",
+    "attemptsLow": "Il ne reste que {n} tentatives",
+    "attemptsLowDesc": "Passez à un plan supérieur pour continuer à optimiser vos candidatures.",
+    "attemptsOut": "Vous n'avez plus de tentatives",
+    "attemptsOutDesc": "Passez à un plan supérieur pour continuer à utiliser toutes les fonctionnalités IA.",
+    "upgrade": "Mettre à niveau",
+    "uploadNow": "Télécharger maintenant",
+    "markAllRead": "Tout marquer comme lu"
   }
 }

@@ -8,7 +8,8 @@
     "savedJobs": "Saved",
     "history": "History",
     "settings": "Settings",
-    "signOut": "Sign out"
+    "signOut": "Sign out",
+    "notifications": "Notifications"
   },
   "dashboard": {
     "welcome": "Welcome back, {name}",
@@ -16,6 +17,21 @@
     "attemptsRemaining": "Attempts remaining",
     "plan": "Plan",
     "upgrade": "Upgrade plan",
+    "suggestedJobs": "Jobs for you",
+    "suggestedJobsSubtitle": "Based on your profile CV",
+    "viewAllJobs": "View all",
+    "noSuggestionsYet": "Upload your profile CV to get personalized job suggestions.",
+    "uploadCvCta": "Upload CV",
+    "savedJobsTitle": "Saved jobs",
+    "contextual": {
+      "noProfileCv": "Your profile CV isn't uploaded yet",
+      "noProfileCvDesc": "Upload your CV once — MatchMyJob will use it automatically across all features.",
+      "uploadNow": "Upload now",
+      "attemptsLow": "Running low on attempts",
+      "attemptsLowDesc": "You have {n} attempt left. Upgrade to keep all features running.",
+      "attemptsLowDescPlural": "You have {n} attempts left. Upgrade to keep all features running.",
+      "upgradeNow": "Upgrade now"
+    },
     "features": {
       "cvOptimizer": {
         "title": "CV Optimizer",
@@ -102,7 +118,19 @@
     "mostPopular": "Most popular",
     "currentPlan": "Current plan",
     "perMonth": "/mo",
-    "footer": "No auto-renewal without your explicit confirmation · Cancel anytime from Settings · Secure payment via Stripe"
+    "footer": "No auto-renewal without your explicit confirmation · Cancel anytime from Settings · Secure payment via Stripe",
+    "attemptsLifetime": "attempts · lifetime",
+    "attemptsMonth": "attempts / month",
+    "getPlan": "Get {plan}",
+    "features": {
+      "cvUploadsMax": "5 CV uploads max",
+      "unlimitedCv": "Unlimited CV storage",
+      "allFeatures": "All 4 AI features",
+      "basicSupport": "Basic support",
+      "emailSupport": "Email support",
+      "prioritySupport": "Priority support",
+      "apiAccess": "API access"
+    }
   },
   "settings": {
     "title": "Settings",
@@ -124,7 +152,13 @@
     "cancelYes": "Yes, cancel",
     "keepPlan": "Keep plan",
     "auth": "Authentication",
-    "accountCreated": "Account created"
+    "accountCreated": "Account created",
+    "profileCv": "Profile CV",
+    "profileCvDesc": "This CV is used automatically in CV Optimizer and Cover Letter.",
+    "uploadCv": "Upload CV",
+    "replaceCv": "Replace CV",
+    "cvUploaded": "CV uploaded",
+    "uploading": "Uploading…"
   },
   "cvOptimizer": {
     "title": "CV Optimizer",
@@ -175,13 +209,21 @@
     "guidedDesc": "Answer 4 quick questions about your experience. Claude uses your words to craft a more personal letter.",
     "guidedCta": "Answer questions first",
     "jobOfferLabel": "Job offer",
+    "jobOfferPlaceholder": "Paste the full job description here…",
     "cvTextLabel": "Your CV text",
     "cvTextHint": "Paste the text content of your CV so Claude can personalize the letter.",
+    "profileCvLoaded": "Profile CV loaded",
+    "clearCv": "Clear",
     "submit": "Generate cover letter — 1 attempt",
+    "submitGuided": "Generate from my answers — 1 attempt",
     "loading": "Writing your cover letter…",
     "wordCount": "{mode} cover letter · {count} words",
+    "modeAuto": "auto",
+    "modeGuided": "guided",
     "writeAnother": "Write another",
-    "regenerate": "Regenerate"
+    "regenerate": "Regenerate",
+    "backToMode": "Back",
+    "questionOf": "Question {n} of {total}"
   },
   "jobs": {
     "title": "Job Search",
@@ -200,6 +242,53 @@
     "analyze": "Analyze",
     "optimizeCv": "Optimize CV for this job",
     "save": "Save",
-    "unsave": "Unsave"
+    "unsave": "Unsave",
+    "popularSearches": "Popular searches",
+    "searching": "Searching job listings…",
+    "allowLocation": "See jobs near you",
+    "allowLocationHint": "Allow location access to automatically filter listings by your city.",
+    "allow": "Allow",
+    "detectingLocation": "Detecting your location…",
+    "locationDetected": "Location detected:",
+    "locationFiltered": "search results will be filtered to your area.",
+    "nearYou": "Results will be filtered near",
+    "remoteLabel": "Remote",
+    "allTypes": "All types",
+    "fullTime": "Full-time",
+    "partTime": "Part-time",
+    "contract": "Contract",
+    "internship": "Internship",
+    "suggestedForYou": "Suggested for you",
+    "basedOnCv": "Based on your profile CV",
+    "uploadCvForSuggestions": "Upload your profile CV to get personalized job suggestions",
+    "uploadCvCta": "Upload CV",
+    "loadingSuggestions": "Finding jobs that match your CV…",
+    "yourSearch": "Your search"
+  },
+  "savedJobs": {
+    "title": "Saved jobs",
+    "subtitle": "Jobs you've saved for later. Saving is free — analyzing or optimizing costs 1 attempt.",
+    "empty": "No saved jobs yet. Browse jobs and save the ones that interest you.",
+    "browseCta": "Browse jobs",
+    "back": "Back to dashboard",
+    "savedOn": "Saved on",
+    "analyze": "Analyze",
+    "optimizeCv": "Optimize CV",
+    "apply": "Apply",
+    "remove": "Remove"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "empty": "You're all caught up!",
+    "emptyDesc": "No new notifications.",
+    "uploadCv": "Upload your profile CV",
+    "uploadCvDesc": "Get personalized job suggestions and automatic CV pre-loading in all features.",
+    "attemptsLow": "Only {n} attempts left",
+    "attemptsLowDesc": "Upgrade your plan to keep optimizing your applications.",
+    "attemptsOut": "You're out of attempts",
+    "attemptsOutDesc": "Upgrade now to continue using all AI features.",
+    "upgrade": "Upgrade",
+    "uploadNow": "Upload now",
+    "markAllRead": "Mark all read"
   }
 }

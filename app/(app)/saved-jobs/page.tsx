@@ -1,4 +1,5 @@
 import { createClient } from '@/lib/supabase/server'
+import { getTranslations } from 'next-intl/server'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import {
@@ -37,6 +38,7 @@ export default async function SavedJobsPage() {
     .order('created_at', { ascending: false })
 
   const jobs = (savedJobs ?? []) as SavedJobRow[]
+  const t = await getTranslations('savedJobs')
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
@@ -44,7 +46,7 @@ export default async function SavedJobsPage() {
         href="/dashboard"
         className="inline-flex items-center gap-1.5 text-[13px] text-[#64748B] hover:text-[#0F172A] mb-8 transition-colors"
       >
-        <ArrowLeft className="w-3.5 h-3.5" /> Back to dashboard
+        <ArrowLeft className="w-3.5 h-3.5" /> {t('back')}
       </Link>
 
       {/* Header */}
@@ -54,9 +56,11 @@ export default async function SavedJobsPage() {
             <Bookmark className="w-5 h-5 text-[#1B4FFF]" />
           </div>
           <div>
-            <h1 className="text-2xl font-bold text-[#0F172A]">Saved Jobs</h1>
+            <h1 className="text-2xl font-bold text-[#0F172A]">{t('title')}</h1>
             <p className="text-[13px] text-[#64748B]">
-              {jobs.length} job{jobs.length !== 1 ? 's' : ''} saved
+              {jobs.length !== 1
+                ? `${jobs.length} jobs`
+                : `${jobs.length} job`}
             </p>
           </div>
         </div>
@@ -64,7 +68,7 @@ export default async function SavedJobsPage() {
           href="/jobs"
           className="flex items-center gap-1.5 px-4 py-2 bg-[#1B4FFF] hover:bg-[#1240D6] text-white text-[13px] font-semibold rounded-lg transition-colors"
         >
-          <Globe className="w-3.5 h-3.5" /> Search more jobs
+          <Globe className="w-3.5 h-3.5" /> {t('browseCta')}
         </Link>
       </div>
 
@@ -74,15 +78,13 @@ export default async function SavedJobsPage() {
           <div className="w-14 h-14 rounded-2xl bg-[#EEF2FF] flex items-center justify-center mb-4">
             <Bookmark className="w-7 h-7 text-[#1B4FFF]" />
           </div>
-          <h2 className="text-lg font-semibold text-[#0F172A] mb-2">No saved jobs yet</h2>
-          <p className="text-[14px] text-[#64748B] max-w-xs mb-6">
-            Save jobs you&apos;re interested in from the job search page — it&apos;s free and doesn&apos;t use any attempts.
-          </p>
+          <h2 className="text-lg font-semibold text-[#0F172A] mb-2">{t('title')}</h2>
+          <p className="text-[14px] text-[#64748B] max-w-xs mb-6">{t('empty')}</p>
           <Link
             href="/jobs"
             className="flex items-center gap-1.5 px-5 py-2.5 bg-[#1B4FFF] hover:bg-[#1240D6] text-white text-[14px] font-semibold rounded-xl transition-colors"
           >
-            Browse jobs <ChevronRight className="w-4 h-4" />
+            {t('browseCta')} <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
       )}
@@ -125,7 +127,7 @@ export default async function SavedJobsPage() {
                         <p className="text-[#64748B] text-[13px] mt-0.5">{job.company}</p>
                       </div>
                       <div className="flex items-center gap-2 shrink-0">
-                        <span className="text-[12px] text-[#94A3B8]">Saved {savedDate}</span>
+                        <span className="text-[12px] text-[#94A3B8]">{t('savedOn')} {savedDate}</span>
                         {/* Client component for unsave button */}
                         <SavedJobActions savedJobId={id} jobId={job.job_id} />
                       </div>
@@ -170,7 +172,7 @@ export default async function SavedJobsPage() {
                         rel="noopener noreferrer"
                         className="flex items-center gap-1.5 px-3 py-1.5 bg-[#EA580C] hover:bg-[#c2410c] text-white text-[12px] font-semibold rounded-lg transition-colors"
                       >
-                        Apply <ExternalLink className="w-3 h-3" />
+                        {t('apply')} <ExternalLink className="w-3 h-3" />
                       </a>
                       <Link
                         href={`/job-analyzer?prefill=${encodeURIComponent(
@@ -178,7 +180,7 @@ export default async function SavedJobsPage() {
                         )}`}
                         className="flex items-center gap-1.5 px-3 py-1.5 border border-[#00C97A] text-[#00C97A] text-[12px] font-semibold rounded-lg hover:bg-[#E6FBF3] transition-colors"
                       >
-                        Analyze <ChevronRight className="w-3 h-3" />
+                        {t('analyze')} <ChevronRight className="w-3 h-3" />
                       </Link>
                       <Link
                         href={`/cv-optimizer?job=${encodeURIComponent(
@@ -186,7 +188,7 @@ export default async function SavedJobsPage() {
                         )}`}
                         className="flex items-center gap-1.5 px-3 py-1.5 border border-[#E2E8F0] text-[#64748B] text-[12px] font-medium rounded-lg hover:bg-[#F8FAFC] transition-colors"
                       >
-                        Optimize CV for this job
+                        {t('optimizeCv')}
                       </Link>
                     </div>
                   </div>

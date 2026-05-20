@@ -9,6 +9,7 @@ import {
 } from 'lucide-react'
 import { createClient } from '@/lib/supabase/client'
 import { AttemptsCounter } from './AttemptsCounter'
+import { NotificationBell } from './NotificationBell'
 import type { Subscription } from '@/lib/supabase/types'
 import { useTranslations, useLocale } from 'next-intl'
 
@@ -25,9 +26,10 @@ const NAV_LINK_KEYS = [
 interface Props {
   subscription: Subscription | null
   loadingSubscription: boolean
+  hasProfileCv?: boolean
 }
 
-export function AppNavbar({ subscription, loadingSubscription }: Props) {
+export function AppNavbar({ subscription, loadingSubscription, hasProfileCv = false }: Props) {
   const pathname = usePathname()
   const router = useRouter()
   const supabase = createClient()
@@ -88,6 +90,7 @@ export function AppNavbar({ subscription, loadingSubscription }: Props) {
           {/* Right side */}
           <div className="flex items-center gap-2 shrink-0">
             <AttemptsCounter subscription={subscription} loading={loadingSubscription} />
+            <NotificationBell subscription={subscription} hasProfileCv={hasProfileCv} />
 
             {/* Locale toggle */}
             <button

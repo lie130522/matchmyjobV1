@@ -4,67 +4,86 @@ import { useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { Check, Zap, Loader2, ArrowLeft, Star } from 'lucide-react'
 import Link from 'next/link'
-
-const PLANS = [
-  {
-    key: 'free',
-    name: 'Free',
-    price: 0,
-    period: null,
-    attempts: '4 attempts · lifetime',
-    features: ['5 CV uploads max', 'All 4 AI features', 'Basic support'],
-    cta: 'Current plan',
-    disabled: true,
-    style: 'border-[#E2E8F0] bg-white',
-    ctaStyle: 'border border-[#E2E8F0] text-[#94A3B8] cursor-default',
-  },
-  {
-    key: 'starter',
-    name: 'Starter',
-    price: 2,
-    period: '/mo',
-    attempts: '25 attempts / month',
-    features: ['Unlimited CV storage', 'All 4 AI features', 'Email support'],
-    cta: 'Get Starter',
-    disabled: false,
-    style: 'border-[#1B4FFF] bg-white',
-    ctaStyle: 'border border-[#1B4FFF] text-[#1B4FFF] hover:bg-[#EEF2FF]',
-  },
-  {
-    key: 'pro',
-    name: 'Pro',
-    price: 5,
-    period: '/mo',
-    attempts: '60 attempts / month',
-    features: ['Unlimited CV storage', 'All 4 AI features', 'Priority support'],
-    cta: 'Get Pro',
-    disabled: false,
-    badge: 'Most popular',
-    style: 'border-[#1B4FFF] bg-[#1B4FFF]',
-    ctaStyle: 'bg-white text-[#1B4FFF] hover:bg-[#EEF2FF]',
-    dark: true,
-  },
-  {
-    key: 'expert',
-    name: 'Expert',
-    price: 10,
-    period: '/mo',
-    attempts: '130 attempts / month',
-    features: ['Unlimited CV storage', 'All 4 AI features', 'Priority + API access'],
-    cta: 'Get Expert',
-    disabled: false,
-    style: 'border-[#7C3AED] bg-white',
-    ctaStyle: 'border border-[#7C3AED] text-[#7C3AED] hover:bg-[#F5F3FF]',
-  },
-]
+import { useTranslations } from 'next-intl'
 
 export default function PricingPage() {
   const router = useRouter()
   const searchParams = useSearchParams()
+  const t = useTranslations('pricing')
+  const tc = useTranslations('common')
   const [loading, setLoading] = useState<string | null>(null)
   const [error, setError] = useState('')
 
   const highlightedPlan = searchParams.get('plan')
+
+  const PLANS = [
+    {
+      key: 'free',
+      name: 'Free',
+      price: 0,
+      period: null,
+      attemptsLabel: `4 ${t('attemptsLifetime')}`,
+      features: [
+        t('features.cvUploadsMax'),
+        t('features.allFeatures'),
+        t('features.basicSupport'),
+      ],
+      cta: t('currentPlan'),
+      disabled: true,
+      style: 'border-[#E2E8F0] bg-white',
+      ctaStyle: 'border border-[#E2E8F0] text-[#94A3B8] cursor-default',
+    },
+    {
+      key: 'starter',
+      name: 'Starter',
+      price: 2,
+      period: t('perMonth'),
+      attemptsLabel: `25 ${t('attemptsMonth')}`,
+      features: [
+        t('features.unlimitedCv'),
+        t('features.allFeatures'),
+        t('features.emailSupport'),
+      ],
+      cta: t('getPlan', { plan: 'Starter' }),
+      disabled: false,
+      style: 'border-[#1B4FFF] bg-white',
+      ctaStyle: 'border border-[#1B4FFF] text-[#1B4FFF] hover:bg-[#EEF2FF]',
+    },
+    {
+      key: 'pro',
+      name: 'Pro',
+      price: 5,
+      period: t('perMonth'),
+      attemptsLabel: `60 ${t('attemptsMonth')}`,
+      features: [
+        t('features.unlimitedCv'),
+        t('features.allFeatures'),
+        t('features.prioritySupport'),
+      ],
+      cta: t('getPlan', { plan: 'Pro' }),
+      disabled: false,
+      badge: t('mostPopular'),
+      style: 'border-[#1B4FFF] bg-[#1B4FFF]',
+      ctaStyle: 'bg-white text-[#1B4FFF] hover:bg-[#EEF2FF]',
+      dark: true,
+    },
+    {
+      key: 'expert',
+      name: 'Expert',
+      price: 10,
+      period: t('perMonth'),
+      attemptsLabel: `130 ${t('attemptsMonth')}`,
+      features: [
+        t('features.unlimitedCv'),
+        t('features.allFeatures'),
+        `${t('features.prioritySupport')} + ${t('features.apiAccess')}`,
+      ],
+      cta: t('getPlan', { plan: 'Expert' }),
+      disabled: false,
+      style: 'border-[#7C3AED] bg-white',
+      ctaStyle: 'border border-[#7C3AED] text-[#7C3AED] hover:bg-[#F5F3FF]',
+    },
+  ]
 
   async function handleUpgrade(planKey: string) {
     setLoading(planKey)
@@ -82,7 +101,7 @@ export default function PricingPage() {
       }
       router.push(json.url)
     } catch {
-      setError('Network error. Please try again.')
+      setError(tc('networkError'))
     } finally {
       setLoading(null)
     }
@@ -91,17 +110,12 @@ export default function PricingPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <Link href="/dashboard" className="inline-flex items-center gap-1.5 text-[13px] text-[#64748B] hover:text-[#0F172A] mb-8 transition-colors">
-        <ArrowLeft className="w-3.5 h-3.5" /> Back to dashboard
+        <ArrowLeft className="w-3.5 h-3.5" /> {tc('back')}
       </Link>
 
       <div className="text-center mb-10">
-        <h1 className="text-3xl font-bold text-[#0F172A] mb-2">
-          Simple, transparent pricing
-        </h1>
-        <p className="text-[#64748B] max-w-xl mx-auto">
-          1 attempt = 1 AI feature use. No auto-renewal — you confirm before each period.
-          Unused attempts do not roll over.
-        </p>
+        <h1 className="text-3xl font-bold text-[#0F172A] mb-2">{t('title')}</h1>
+        <p className="text-[#64748B] max-w-xl mx-auto">{t('subtitle')}</p>
       </div>
 
       {error && (
@@ -137,7 +151,7 @@ export default function PricingPage() {
                   )}
                 </div>
                 <div className={`flex items-center gap-1 text-[12px] font-medium ${plan.dark ? 'text-white/80' : 'text-[#64748B]'}`}>
-                  <Zap className="w-3 h-3" fill="currentColor" /> {plan.attempts}
+                  <Zap className="w-3 h-3" fill="currentColor" /> {plan.attemptsLabel}
                 </div>
               </div>
 
@@ -163,9 +177,7 @@ export default function PricingPage() {
         })}
       </div>
 
-      <p className="text-center text-[12px] text-[#94A3B8] mt-8">
-        No auto-renewal without your explicit confirmation · Cancel anytime from Settings · Secure payment via Stripe
-      </p>
+      <p className="text-center text-[12px] text-[#94A3B8] mt-8">{t('footer')}</p>
     </div>
   )
 }
